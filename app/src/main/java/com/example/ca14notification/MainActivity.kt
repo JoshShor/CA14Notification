@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun createNotificationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            val channel:NotificationChannel = NotificationChannel("C10", "Title", NotificationManager.IMPORTANCE_DEFAULT).apply {
+            val channel:NotificationChannel = NotificationChannel("C10", "Title",
+                NotificationManager.IMPORTANCE_DEFAULT).apply {
                 description = "Description"
             }
             val notificationManager:NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
